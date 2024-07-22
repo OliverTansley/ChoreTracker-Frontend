@@ -14,13 +14,14 @@ struct LoginView: View {
     
     var body: some View {
         VStack(spacing: 18){
+            
             // Title decoration
             ZStack {
-                RoundedRectangle(cornerSize: CGSize(width: 0, height: 20))
-                    .size(CGSize(width: 800.0, height: 350.0))
+                RoundedRectangle(cornerSize: CGSize(width: 40, height: 20))
+                    .size(CGSize(width: 395.0, height: 350.0))
                     .foregroundColor(.blue)
-                    .offset(x:-70,y:-50)
-                    .rotationEffect(Angle(degrees: 15))
+                    .offset(x:-10,y:-50)
+                    .rotationEffect(Angle(degrees: 0))
                 Text("Chore Tracker")
                     .font(.system(size: 44,weight: .bold))
                     .foregroundColor(.white)
@@ -70,7 +71,6 @@ struct LoginView: View {
             
             //Buttons
             HStack {
-                
                 Button {
                     debugPrint("Login Button Tapped!")
                 } label: {
@@ -82,7 +82,6 @@ struct LoginView: View {
                 .background(.blue)
                 .cornerRadius(4)
                 .padding(.top, 36)
-                
                 Button {
                     debugPrint("Login Button Tapped!")
                 } label: {
@@ -95,7 +94,6 @@ struct LoginView: View {
                 .cornerRadius(4)
                 .padding(.top, 36)
             }
-            
             Spacer()
         }.padding(10)
         
