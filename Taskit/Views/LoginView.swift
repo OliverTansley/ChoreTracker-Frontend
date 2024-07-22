@@ -18,15 +18,14 @@ struct LoginView: View {
             // Title decoration
             ZStack {
                 RoundedRectangle(cornerSize: CGSize(width: 40, height: 20))
-                    .size(CGSize(width: 395.0, height: 350.0))
+                    .size(CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height/3))
                     .foregroundColor(.blue)
-                    .offset(x:-10,y:-50)
+                    .offset(x:-10,y:0)
                     .rotationEffect(Angle(degrees: 0))
                 Text("Chore Tracker")
                     .font(.system(size: 44,weight: .bold))
                     .foregroundColor(.white)
-                    .offset(y:-50)
-            }.offset(y:-80)
+            }.offset(CGSize(width: 0, height: -100.0))
             
             // Username input
             VStack(alignment: .leading, spacing: 11) {
